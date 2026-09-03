@@ -14,6 +14,7 @@ import { VegapunkAiTerminal } from './components/VegapunkAiTerminal.tsx';
 import { MangaHalftoneMenu, HalftonePatternMode } from './components/MangaHalftoneMenu.tsx';
 import { sound } from './utils/audio.ts';
 import { Sun, Heart } from 'lucide-react';
+import jollyRogerImg from './assets/images/jollyroger.png';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TerminalTab>('timeline'); 
@@ -24,6 +25,18 @@ export default function App() {
   // Interactive Gear 5 Awakening Mode State
   const [nikaAwakened, setNikaAwakened] = useState<boolean>(false);
   const [pulseCount, setPulseCount] = useState<number>(0);
+
+  // Set Jolly Roger dynamic tab icon on mount
+  useEffect(() => {
+    let link: HTMLLinkElement | null = document.querySelector("link[rel*='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    link.type = 'image/png';
+    link.href = jollyRogerImg;
+  }, []);
 
   // Trigger heartbeat counter when awakened
   useEffect(() => {
@@ -43,7 +56,7 @@ export default function App() {
     const nextState = !nikaAwakened;
     setNikaAwakened(nextState);
     if (nextState) {
-      console.log(" Drums of Liberation reaching maximum frequency! Nika mode active!");
+      console.log("Drums of Liberation reaching maximum frequency! Nika mode active!");
     }
   };
 

@@ -7,11 +7,8 @@ import {
   Circle, 
   BookOpen, 
   Tv, 
-  Skull, 
-  Zap, 
   MapPin, 
   Search,
-  Layers,
   Compass,
   Navigation
 } from 'lucide-react';
@@ -211,7 +208,7 @@ export const LogPoseTimeline: React.FC<LogPoseTimelineProps> = ({ onSelectArcEra
                 }`}>
                   {index + 1}
                 </span>
-                <Layers className="w-3.5 h-3.5" />
+                
                 <span>{saga.name.toUpperCase()}</span>
                 <span className={`text-[10px] px-1.5 py-0.2 font-mono border border-black ${
                   isSelected ? 'bg-[#ffd700] text-black' : 'bg-stone-200 text-stone-800'

@@ -110,7 +110,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`[Grand Line Terminal] Engine online at http://0.0.0.0:${PORT}`);
+    console.log(`[Grand Line Terminal] Engine online at http://localhost:${PORT}`);
   });
 }
 

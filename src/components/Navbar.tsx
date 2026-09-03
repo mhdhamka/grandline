@@ -66,14 +66,14 @@ export const Navbar: React.FC<NavbarProps> = ({
     label: string; 
     jp: string; 
   }[] = [
-    { id: 'timeline', cost: 1, label: 'LOG POSE ARCS', jp: '航海日誌' },
-    { id: 'poneglyphs', cost: 2, label: 'ROAD PONEGLYPHS', jp: '歴史の本文' },
+    { id: 'timeline', cost: 1, label: 'LOG POSE', jp: '航海日誌' },
+    { id: 'poneglyphs', cost: 2, label: 'PONEGLYPHS', jp: '歴史の本文' },
     { id: 'nakama', cost: 3, label: 'NAKAMA', jp: '麦わらの一味' },
     { id: 'gears', cost: 4, label: 'GEAR MATRIX', jp: 'ギア覚醒' },
-    { id: 'devilfruit', cost: 5, label: 'DEVIL FRUIT TREE', jp: '悪魔の実系統樹' },
+    { id: 'devilfruit', cost: 5, label: 'DEVIL FRUIT', jp: '悪魔の実系統樹' },
     { id: 'rogues', cost: 6, label: 'ROGUES GALLERY', jp: '強敵ファイル' },
     { id: 'wanted', cost: 7, label: 'WANTED STUDIO', jp: '手配書生成' },
-    { id: 'haki', cost: 8, label: 'HAKI LAB', jp: '覇気鍛錬' },
+    { id: 'haki', cost: 8, label: 'HAKI', jp: '覇気鍛錬' },
     { id: 'ship', cost: 9, label: 'THOUSAND SUNNY', jp: 'サニー号' },
     { id: 'movies', cost: 10, label: 'CINEMATICS', jp: '劇場版回顧' },
     { id: 'vegapunk', cost: 11, label: 'VEGAPUNK AI', jp: 'ベガパンクAI' },
