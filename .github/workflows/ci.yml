@@ -1,0 +1,34 @@
+name: Grandline Log Pose CI // Straw Hat Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Log Pose Calibration // Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Initialize MADS Labosphere // Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Loading Green Blood & Dependencies // Install
+        run: npm ci
+
+      - name: Drums of Liberation Active // Run TypeScript Build
+        run: |
+          echo "=================================================="
+          echo " GRANDLINE LOG: DEPARTURE FROM LOGUE TOWN "
+          echo "=================================================="
+          npm run build
+          echo "=================================================="
+          echo " PUNK RECORDS SYNC COMPLETE: LAUGH TALE REACHED "
+          echo "=================================================="
