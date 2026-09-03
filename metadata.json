@@ -1,0 +1,6 @@
+{
+  "name": "Grand Line Archives // One Piece Omniverse Terminal",
+  "description": "Tactical databook & Grand Line Log Pose HUD featuring complete sagas, transformation trees, rogues gallery, Vegapunk Den Den Mushi AI, and Wanted Poster generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

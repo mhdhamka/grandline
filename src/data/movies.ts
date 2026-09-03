@@ -1,0 +1,58 @@
+import { MoviePlacement } from '../types.ts';
+
+export const MOVIES_DATA: MoviePlacement[] = [
+  {
+    id: 'strong-world',
+    title: 'One Piece Film: Strong World',
+    releaseYear: 2009,
+    chronologicalPlacement: 'Between Thriller Bark and Sabaody Archipelago (Pre-Timeskip)',
+    mainAntagonist: 'Golden Lion Shiki (Fuwa Fuwa no Mi, legendary Rocks Pirates member)',
+    canonStatus: 'Non-Canon Event with Canon Lore',
+    highlights: 'Executive produced and written directly by Eiichiro Oda with Chapter 0 companion manga. Canonizes Shiki as the first man in history to escape Impel Down. Features the iconic black-suit mafia entrance of the Straw Hats.',
+  },
+  {
+    id: 'film-z',
+    title: 'One Piece Film: Z',
+    releaseYear: 2012,
+    chronologicalPlacement: 'Between Fish-Man Island and Punk Hazard (Post-Timeskip Entrance)',
+    mainAntagonist: 'Black Arm Zephyr ("Z") — Former Marine Admiral and mentor to Akainu, Aokiji, and Kizaru',
+    canonStatus: 'Conceptually Canon Elements',
+    highlights: 'Features the Dyna Stones and Zephyr battle philosophy. Kuzan (Aokiji) post-timeskip roaming appearance. Heartbreaking ending with Kuzan ice barrier honoring his master death.',
+  },
+  {
+    id: 'film-gold',
+    title: 'One Piece Film: Gold',
+    releaseYear: 2016,
+    chronologicalPlacement: 'Between Dressrosa and Zou',
+    mainAntagonist: 'Gild Tesoro (Goru Goru no Mi Gold Awakening / Underworld Kingpin)',
+    canonStatus: 'Stand-Alone Film',
+    highlights: 'Set on Gran Tesoro, a 10-kilometer golden casino entertainment ship. Showcases CP0 Rob Lucci command, Sabo intervention with the Revolutionary Army, and Luffy Gear 4 Tigrex punch.',
+  },
+  {
+    id: 'stampede',
+    title: 'One Piece: Stampede',
+    releaseYear: 2019,
+    chronologicalPlacement: 'Conceptually placed around Whole Cake Island / Pre-Wano Festival',
+    mainAntagonist: 'Douglas Bullet ("The Demon Heir", former Roger Pirates heavyweight)',
+    canonStatus: 'Non-Canon Event with Canon Lore',
+    highlights: 'Celebrates the 20th Anniversary with the Great Pirate Expo. All Worst Generation supernovas unite. Ends with Luffy crushing the Eternal Pose to Laugh Tale: "If we took a shortcut like this, the adventure wouldn’t be fun at all!"',
+  },
+  {
+    id: 'film-red',
+    title: 'One Piece Film: Red',
+    releaseYear: 2022,
+    chronologicalPlacement: 'Post-Wano Country (Features Gear 5 cameo & Yonko Straw Hats)',
+    mainAntagonist: 'Tot Musica (Ancient Demon of Music) & Uta (The World Diva / Shanks Daughter)',
+    canonStatus: 'Conceptually Canon Elements',
+    highlights: 'Canonizes Uta as Shanks adopted daughter in official volume 4 billion. Features the Red Hair Pirates in coordinated battle, Kizaru and Fujitora clash, and synchronized dual attack between Luffy Gear 5 and Shanks.',
+  },
+  {
+    id: 'baron-omatsuri',
+    title: 'Baron Omatsuri and the Secret Island',
+    releaseYear: 2005,
+    chronologicalPlacement: 'Post-Skypiea, pre-Water 7',
+    mainAntagonist: 'Baron Omatsuri & The Lily Carnation',
+    canonStatus: 'Stand-Alone Film',
+    highlights: 'Directed by legendary auteur Mamoru Hosoda. Dark psychological breakdown of crew grief, isolation, and how an old pirate captain lost his nakama in a storm.',
+  },
+];

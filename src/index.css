@@ -1,0 +1,368 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-manga: 'Bebas Neue', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
+    --font-jp: 'Noto Sans JP', sans-serif;
+    --font-cinzel: 'Cinzel', serif;
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-comic: 'Comic Neue', cursive, sans-serif;
+    --font-shout: 'Bangers', cursive, sans-serif;
+
+    /* Gear 5 Nika & Vibrant Pop-Art Comic Palette */
+    --color-op-red: #dc0f0d;
+    --color-op-gold: #ffd700;
+    --color-op-blue: #0b44c8;
+    --color-op-navy: #11141d;
+    --color-op-purple: #9333ea;
+    --color-op-green: #059669;
+    --color-op-black: #000000;
+    --color-op-paper: #fffdfa;
+  }
+
+  body {
+    background-color: #fffdfa;
+    color: #111827;
+    font-family: var(--font-heading), var(--font-jp), sans-serif;
+  }
+}
+
+.font-manga {
+  font-family: var(--font-manga), 'Oswald', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-heading {
+  font-family: var(--font-heading), var(--font-jp), sans-serif;
+}
+
+.font-jp {
+  font-family: var(--font-jp), sans-serif;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel), serif;
+}
+
+.font-tech,
+.font-mono,
+.font-code {
+  font-family: var(--font-mono), monospace;
+}
+
+.font-comic {
+  font-family: var(--font-comic), 'Comic Neue', cursive, sans-serif;
+}
+
+.font-shout {
+  font-family: var(--font-shout), 'Bebas Neue', 'Oswald', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   MANGA & ANIME PANEL STYLING (Gear 5 White Comic Style)
+   ============================================================ */
+
+/* Primary Manga Comic Panel */
+.manga-panel {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.manga-panel:hover {
+  border-color: #000000;
+  box-shadow: 6px 6px 0px #000000;
+  background-color: #fffefb;
+}
+
+/* White/Parchment Manga Panel Variant */
+.manga-panel-paper {
+  background-color: #fffdfa;
+  color: #111827;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Red High-Impact Manga Panel */
+.manga-panel-red {
+  background-color: #fff5f5;
+  border: 3px solid #dc0f0d;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Gold Emperor / Leader Panel */
+.manga-panel-gold {
+  background-color: #fffef0;
+  border: 3px solid #f5b300;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Blue Marine / Warlord Panel */
+.manga-panel-blue {
+  background-color: #f0f6ff;
+  border: 3px solid #0b44c8;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Terminal / Cybernetic Egghead Panel */
+.manga-panel-terminal {
+  background-color: #f0fdff;
+  border: 3px solid #00b4d8;
+  box-shadow: 4px 4px 0px #000000, 0 0 15px rgba(0, 180, 216, 0.15);
+}
+
+/* Dynamic Manga Gutters */
+.manga-gutter {
+  border: 2px solid #000000;
+}
+
+/* Manga Slanted Ribbon / Badge (ONE PIECE TCG Style) */
+.manga-ribbon {
+  transform: skewX(-8deg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.manga-ribbon > * {
+  transform: skewX(8deg);
+}
+
+/* Hard Comic Drop Shadows */
+.comic-shadow-sm {
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.comic-shadow {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.comic-shadow-lg {
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.comic-shadow-red {
+  box-shadow: 4px 4px 0px #dc0f0d;
+}
+
+.comic-shadow-gold {
+  box-shadow: 4px 4px 0px #f5b300;
+}
+
+/* ============================================================
+   ONE PIECE CARD GAME (TCG) ASSETS & CARD FRAMING
+   ============================================================ */
+
+/* TCG Card Outer Frame */
+.op-card-frame {
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.op-card-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px #000000, 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+/* TCG Leader Foil Card Glow */
+.op-leader-card {
+  background: linear-gradient(135deg, #fffef0 0%, #ffffff 100%);
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000, 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Rarity Badges */
+.rarity-badge-sec {
+  background: linear-gradient(90deg, #ff0077, #7928ca);
+  color: #ffffff;
+  font-weight: 900;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.rarity-badge-sr {
+  background: linear-gradient(90deg, #ffd700, #dc0f0d);
+  color: #000000;
+  font-weight: 900;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.rarity-badge-leader {
+  background: #dc0f0d;
+  color: #ffffff;
+  font-weight: 900;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000;
+}
+
+/* Card Cost Gem (Golden Orb with Number) */
+.op-cost-gem {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffd700, #d97706 70%, #78350f);
+  border: 2px solid #000000;
+  color: #000000;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+/* Manga Action SFX Lettering ("DON!!", "ドドン!!") */
+.manga-sfx {
+  font-family: 'Bebas Neue', 'Noto Sans JP', sans-serif;
+  color: #dc0f0d;
+  -webkit-text-stroke: 1.5px #000000;
+  text-shadow: 3px 3px 0px #ffd700;
+  display: inline-block;
+  font-weight: 900;
+}
+
+.manga-sfx-gold {
+  font-family: 'Bebas Neue', 'Noto Sans JP', sans-serif;
+  color: #ffd700;
+  -webkit-text-stroke: 1.5px #000000;
+  text-shadow: 3px 3px 0px #dc0f0d;
+  display: inline-block;
+  font-weight: 900;
+}
+
+/* Manga Speed Lines Overlay */
+.manga-speedlines {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 15px,
+    rgba(0, 0, 0, 0.03) 15px,
+    rgba(0, 0, 0, 0.03) 16px
+  );
+}
+
+/* Ben-Day Halftone Screentone Overlay (Adjusted for Light Mode Paper) */
+.bendy-dots-overlay,
+.manga-panel-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  opacity: 0.4;
+  z-index: 0;
+  transition: opacity 0.3s ease, background-size 0.3s ease;
+}
+
+.bendy-dots-overlay.pattern-loose,
+.manga-halftone-loose {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  opacity: 0.35;
+}
+
+.bendy-dots-overlay.pattern-dense,
+.manga-halftone-dense {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1.2px, transparent 1.2px);
+  background-size: 8px 8px;
+  opacity: 0.45;
+}
+
+.bendy-dots-overlay.pattern-inverted,
+.manga-halftone-inverted {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1.8px, transparent 1.8px),
+                    radial-gradient(rgba(220, 15, 13, 0.15) 1.2px, transparent 1.2px);
+  background-size: 12px 12px, 12px 12px;
+  background-position: 0 0, 6px 6px;
+  background-color: rgba(255, 215, 0, 0.03);
+  opacity: 0.5;
+}
+
+/* TCG Playmat Grid Pattern */
+.tcg-playmat-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Corner Bracket Accents (Comic Ink & Gold Foil) */
+.corner-bracket-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #000000;
+  border-left: 3px solid #000000;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corner-bracket-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #000000;
+  border-right: 3px solid #000000;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corner-bracket-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 3px solid #000000;
+  border-left: 3px solid #000000;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corner-bracket-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 3px solid #000000;
+  border-right: 3px solid #000000;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Custom Tactical Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f0eb;
+  border-left: 1px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 1px solid #000000;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc0f0d;
+}
