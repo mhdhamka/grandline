@@ -8,7 +8,6 @@ import { DevilFruitTree } from './components/DevilFruitTree.tsx';
 import { RoguesGallery } from './components/RoguesGallery.tsx';
 import { BountyGenerator } from './components/BountyGenerator.tsx';
 import { HakiCombatLab } from './components/HakiCombatLab.tsx';
-import { ShipDeckHud } from './components/ShipDeckHud.tsx';
 import { CinematicTimeline } from './components/CinematicTimeline.tsx';
 import { VegapunkAiTerminal } from './components/VegapunkAiTerminal.tsx';
 import { MangaHalftoneMenu, HalftonePatternMode } from './components/MangaHalftoneMenu.tsx';
@@ -159,7 +158,6 @@ export default function App() {
               {activeTab === 'rogues' && <RoguesGallery />}
               {activeTab === 'wanted' && <BountyGenerator />}
               {activeTab === 'haki' && <HakiCombatLab />}
-              {activeTab === 'ship' && <ShipDeckHud />}
               {activeTab === 'movies' && <CinematicTimeline />}
               {activeTab === 'vegapunk' && <VegapunkAiTerminal />}
             </div>
