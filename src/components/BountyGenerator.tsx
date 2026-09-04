@@ -14,8 +14,8 @@ import {
   Printer
 } from 'lucide-react';
 import { BountyProgressionChart } from './BountyProgressionChart.tsx';
-import { MangaPanel } from './MangaPanel.tsx';
-import { MangaBubble } from './MangaBubble.tsx';
+import { MangaPanel } from './Manga/MangaPanel.tsx';
+import { MangaBubble } from './Manga/MangaBubble.tsx';
 
 const PRESET_AVATARS = [
   { name: 'Straw Hat', url: 'https://static0.srcdn.com/wordpress/wp-content/uploads/2025/09/one-piece-luffy-using-gear-4-in-egghead.jpg?w=1600&h=900&fit=crop' },

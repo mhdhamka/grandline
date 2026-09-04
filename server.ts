@@ -1,14 +1,13 @@
 import express from 'express';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
 import { createServer as createViteServer } from 'vite';
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Standard CommonJS directory reference (fixes the build import.meta warning)
+const __dirname = path.resolve();
 
 const app = express();
 const PORT = 3000;
@@ -70,7 +69,7 @@ app.post('/api/gemini/chat', async (req, res) => {
     const systemInstruction = personaInstructions[persona] || personaInstructions.stella;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemini-2.5-flash',
       contents: [
         ...(context ? [{ text: `Active Terminal Context: ${context}` }] : []),
         { text: prompt }
@@ -85,10 +84,11 @@ app.post('/api/gemini/chat', async (req, res) => {
       reply: response.text || 'No transmission data received from Punk Records.',
       persona,
     });
-  } catch (error: any) {
-    console.error('Gemini API Error:', error);
+  } catch (error: unknown) {
+    const err = error as Error;
+    console.error('Gemini API Error:', err);
     res.status(500).json({
-      error: error?.message || 'Failure communicating with Vegapunk Satellite.',
+      error: err?.message || 'Failure communicating with Vegapunk Satellite.',
     });
   }
 });
@@ -102,7 +102,7 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    const distPath = path.join(process.cwd(), 'dist');
+    const distPath = path.join(__dirname, 'dist');
     app.use(express.static(distPath));
     app.get('*', (req, res) => {
       res.sendFile(path.join(distPath, 'index.html'));

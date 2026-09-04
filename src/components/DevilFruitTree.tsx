@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { Maximize2, Minimize2, Sun } from 'lucide-react';
-import { MangaPanel } from './MangaPanel';
+import { MangaPanel } from './Manga/MangaPanel';
 import { TAXONOMY_NODES, TREE_EDGES, FruitNode, FruitCategory } from '../data/devilFruitTreeData';
 import { sound } from '../utils/audio';
 

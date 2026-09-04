@@ -15,7 +15,7 @@ import {
   Heart,
   Sun
 } from 'lucide-react';
-import { MangaPanel } from './MangaPanel.tsx';
+import { MangaPanel } from './Manga/MangaPanel.tsx';
 
 export const TransformationMatrix: React.FC = () => {
   const [selectedGearId, setSelectedGearId] = useState<string>('luffy-gear-5');

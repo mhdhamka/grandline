@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sliders } from 'lucide-react';
-import { MangaBubbleShape, MangaBubbleVariant } from '../MangaBubble.tsx';
+import { MangaBubbleShape, MangaBubbleVariant } from '../Manga/MangaBubble.tsx';
 import { sound } from '../../utils/audio.ts';
 
 interface VegapunkCustomizerProps {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Minimize2, Maximize2 } from 'lucide-react';
-import { MangaPanel } from '../MangaPanel';
+import { MangaPanel } from '../Manga/MangaPanel';
 import { FruitNode } from '../../data/devilFruitTreeData';
 
 interface NodeInspectorProps {

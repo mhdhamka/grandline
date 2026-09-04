@@ -1,6 +1,6 @@
 import React from 'react';
 import { Users } from 'lucide-react';
-import { MangaPanel } from '../MangaPanel.tsx';
+import { MangaPanel } from '../Manga/MangaPanel.tsx';
 import { sound } from '../../utils/audio.ts';
 
 interface NakamaHeaderProps {

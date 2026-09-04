@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Cpu, Dna, Info } from 'lucide-react';
-import { MangaPanel } from '../MangaPanel';
+import { MangaPanel } from '../Manga/MangaPanel';
 import { sound } from '../../utils/audio';
 
 export const LineageSynthesizerView: React.FC = () => {

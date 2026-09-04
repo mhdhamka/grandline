@@ -13,7 +13,7 @@ import {
   Scroll,
   Hammer
 } from 'lucide-react';
-import { MangaPanel } from './MangaPanel.tsx';
+import { MangaPanel } from './Manga/MangaPanel.tsx';
 
 export const PoneglyphLaughTale: React.FC = () => {
   const [rubbings, setRubbings] = useState<Record<string, boolean>>({

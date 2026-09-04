@@ -1,6 +1,6 @@
 import React from 'react';
 import { X } from 'lucide-react';
-import { MangaBubble } from '../MangaBubble.tsx';
+import { MangaBubble } from '../Manga/MangaBubble.tsx';
 import { LEGENDARY_MANGA_QUOTES } from '../../data/vegapunk.data';
 
 interface VegapunkCodexProps {

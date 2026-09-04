@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Markdown from 'react-markdown';
 import { Copy, Check, Volume2, Radio, Terminal, Sparkles, AlertCircle } from 'lucide-react';
-import { sound } from '../utils/audio.ts';
+import { sound } from '../../utils/audio.ts';
 
 export type MangaBubbleShape = 'round' | 'square' | 'shout' | 'thought' | 'electric';
 export type MangaBubbleVariant = 'paper' | 'dark' | 'red' | 'gold' | 'terminal';

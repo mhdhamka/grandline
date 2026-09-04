@@ -3,7 +3,7 @@ import { ARC_VILLAINS_DATA } from '../data/villains.ts';
 import { ArcVillain } from '../types.ts';
 import { sound } from '../utils/audio.ts';
 import { Search } from 'lucide-react';
-import { MangaBubble } from './MangaBubble.tsx';
+import { MangaBubble } from './Manga/MangaBubble.tsx';
 import { LuffyLaughing } from './icons/LuffyLaughing.tsx';
 import { LuffyPointing } from './icons/LuffyPointing.tsx';
 

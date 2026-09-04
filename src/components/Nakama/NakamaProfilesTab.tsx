@@ -1,7 +1,7 @@
 import React from 'react';
 import { Quote, TrendingUp } from 'lucide-react';
 import { CharacterProfile } from '../../types.ts';
-import { MangaBubble } from '../MangaBubble.tsx';
+import { MangaBubble } from '../Manga/MangaBubble.tsx';
 import { formatBounty } from '../../utils/formatters.ts';
 import { sound } from '../../utils/audio.ts';
 

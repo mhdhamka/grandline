@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { sound } from '../utils/audio.ts';
 import { Send, Cpu } from 'lucide-react';
-import { MangaBubble, MangaBubbleShape, MangaBubbleVariant } from './MangaBubble.tsx';
+import { MangaBubble, MangaBubbleShape, MangaBubbleVariant } from './Manga/MangaBubble.tsx';
 import { ChatMessage } from '../types/vegapunk.types';
 import { PRESET_QUESTIONS, PERSONA_CONFIGS } from '../data/vegapunk.data';
 import { VegapunkHeader } from './Vegapunk/VegapunkHeader.tsx';

@@ -4,10 +4,10 @@ import {
   VolumeX,
   Sun
 } from 'lucide-react';
-import { sound } from '../utils/audio.ts';
+import { sound } from '../../utils/audio.ts';
 
-import skullLogo from '../assets/images/jollyroger.png';
-import sunnyLogo from '../assets/images/sunny.png'; // Make sure this path points to your sunny.png file
+import skullLogo from '../../assets/images/jollyroger.png';
+import sunnyLogo from '../../assets/images/sunny.png'; // Make sure this path points to your sunny.png file
 
 export type TerminalTab = 
   | 'timeline' 

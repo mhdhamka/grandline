@@ -1,6 +1,6 @@
 import React from 'react';
 import { AlertTriangle } from 'lucide-react';
-import { MangaPanel } from '../MangaPanel';
+import { MangaPanel } from '../Manga/MangaPanel';
 import { AWAKENING_COMPARISONS } from '../../data/devilFruitTreeData';
 
 export const AwakeningMatrixView: React.FC = () => {

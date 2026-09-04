@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Layers, Sparkles, ChevronDown, RefreshCw, Eye, Sliders, Zap, Flame, Compass, CloudLightning } from 'lucide-react';
-import { sound } from '../utils/audio.ts';
+import { sound } from '../../utils/audio.ts';
 
 export type HalftonePatternMode = 'dense' | 'loose' | 'inverted' | 'auto';
 

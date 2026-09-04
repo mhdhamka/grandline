@@ -1,4 +1,4 @@
-import { MangaBubbleShape, MangaBubbleVariant } from '../components/MangaBubble.tsx';
+import { MangaBubbleShape, MangaBubbleVariant } from '../components/Manga/MangaBubble.tsx';
 
 export interface ChatMessage {
   role: 'user' | 'model';

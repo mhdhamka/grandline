@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, TerminalTab } from './components/Navbar.tsx';
+import { Navbar, TerminalTab } from './components/Common/Navbar.tsx';
 import { LogPoseTimeline } from './components/LogPoseTimeline.tsx';
 import { PoneglyphLaughTale } from './components/PoneglyphLaughTale.tsx';
 import { NakamaCodex } from './components/NakamaCodex.tsx';
@@ -10,7 +10,7 @@ import { BountyGenerator } from './components/BountyGenerator.tsx';
 import { HakiCombatLab } from './components/HakiCombatLab.tsx';
 import { CinematicTimeline } from './components/CinematicTimeline.tsx';
 import { VegapunkAiTerminal } from './components/VegapunkAiTerminal.tsx';
-import { MangaHalftoneMenu, HalftonePatternMode } from './components/MangaHalftoneMenu.tsx';
+import { MangaHalftoneMenu, HalftonePatternMode } from './components/Common/MangaHalftoneMenu.tsx';
 import { sound } from './utils/audio.ts';
 import { Sun, Heart } from 'lucide-react';
 import jollyRogerImg from './assets/images/jollyroger.png';
