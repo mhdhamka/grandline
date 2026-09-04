@@ -1,7 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
-import { MangaBubble } from './MangaBubble.tsx';
-import { LEGENDARY_MANGA_QUOTES } from '../data/vegapunk.data';
+import { MangaBubble } from '../MangaBubble.tsx';
+import { LEGENDARY_MANGA_QUOTES } from '../../data/vegapunk.data';
 
 interface VegapunkCodexProps {
   onClose: () => void;

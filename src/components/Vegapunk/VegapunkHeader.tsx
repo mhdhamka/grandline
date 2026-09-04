@@ -1,7 +1,7 @@
 import React from 'react';
 import { BookOpen, Trash2 } from 'lucide-react';
-import { PersonaConfig } from '../types/vegapunk.types';
-import { sound } from '../utils/audio.ts';
+import { PersonaConfig } from '../../types/vegapunk.types';
+import { sound } from '../../utils/audio.ts';
 
 interface VegapunkHeaderProps {
   activeConfig: PersonaConfig;

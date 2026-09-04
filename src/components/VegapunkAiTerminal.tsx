@@ -4,9 +4,9 @@ import { Send, Cpu } from 'lucide-react';
 import { MangaBubble, MangaBubbleShape, MangaBubbleVariant } from './MangaBubble.tsx';
 import { ChatMessage } from '../types/vegapunk.types';
 import { PRESET_QUESTIONS, PERSONA_CONFIGS } from '../data/vegapunk.data';
-import { VegapunkHeader } from './VegapunkHeader.tsx';
-import { VegapunkCodex } from './VegapunkCodex.tsx';
-import { VegapunkCustomizer } from './VegapunkCustomizer.tsx';
+import { VegapunkHeader } from './Vegapunk/VegapunkHeader.tsx';
+import { VegapunkCodex } from './Vegapunk/VegapunkCodex.tsx';
+import { VegapunkCustomizer } from './Vegapunk/VegapunkCustomizer.tsx';
 
 export const VegapunkAiTerminal: React.FC = () => {
   const [persona, setPersona] = useState<string>('stella');
