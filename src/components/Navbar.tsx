@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'nakama', cost: 3, label: 'NAKAMA', jp: '麦わらの一味' },
     { id: 'gears', cost: 4, label: 'GEAR MATRIX', jp: 'ギア覚醒' },
     { id: 'devilfruit', cost: 5, label: 'DEVIL FRUIT', jp: '悪魔の実系統樹' },
-    { id: 'rogues', cost: 6, label: 'ROGUES GALLERY', jp: '強敵ファイル' },
+    { id: 'rogues', cost: 6, label: 'VILLAINS', jp: '強敵ファイル' },
     { id: 'wanted', cost: 7, label: 'WANTED STUDIO', jp: '手配書生成' },
     { id: 'haki', cost: 8, label: 'HAKI', jp: '覇気鍛錬' },
     { id: 'ship', cost: 9, label: 'THOUSAND SUNNY', jp: 'サニー号' },

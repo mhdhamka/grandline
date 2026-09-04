@@ -27,7 +27,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'strawhat',
     affiliation: 'Straw Hat Pirates',
     color: '#ff0055',
-    avatarUrl: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images5.alphacoders.com/131/thumb-1920-1317711.jpeg',
     milestones: [
       {
         arc: 'East Blue Dawn',
@@ -102,7 +102,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'strawhat',
     affiliation: 'Straw Hat Pirates',
     color: '#00ff88',
-    avatarUrl: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://static0.cbrimages.com/wordpress/wp-content/uploads/2023/07/collage-maker-27-jul-2023-01-46-pm-3317.jpg?q=70&fit=crop&w=1600&h=900&dpr=1',
     milestones: [
       {
         arc: 'East Blue Bounty Hunter',
@@ -153,7 +153,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'rogue',
     affiliation: 'Blackbeard Pirates',
     color: '#a855f7',
-    avatarUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://static0.polygonimages.com/wordpress/wp-content/uploads/2025/09/blackbeard-one-piece.jpg?w=1200&h=900&fit=crop',
     milestones: [
       {
         arc: 'Whitebeard 2nd Division',
@@ -196,7 +196,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'supernova',
     affiliation: 'Heart Pirates',
     color: '#00f2ff',
-    avatarUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://i.pinimg.com/originals/a6/58/7d/a6587d0a8db4732e01d7e0149bc97a35.jpg',
     milestones: [
       {
         arc: 'North Blue Rookie',
@@ -247,7 +247,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'supernova',
     affiliation: 'Kid Pirates',
     color: '#ff3300',
-    avatarUrl: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://static.wikia.nocookie.net/onepiece/images/4/47/Eustass_Kid_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20240505021859',
     milestones: [
       {
         arc: 'South Blue Origins',
@@ -290,7 +290,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'rogue',
     affiliation: 'Cross Guild (Figurehead Leader)',
     color: '#ffcc00',
-    avatarUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://i.pinimg.com/474x/e9/6e/86/e96e86b3e724061268a870178a42327b.jpg',
     milestones: [
       {
         arc: 'East Blue Orange Town',
@@ -333,7 +333,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'rogue',
     affiliation: 'Cross Guild / Former Baroque Works',
     color: '#d97706',
-    avatarUrl: 'https://images.unsplash.com/photo-1509281373149-e957c6296406?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://i.pinimg.com/736x/b4/f7/b2/b4f7b2ba684a561d9eda54506eeaa74f.jpg',
     milestones: [
       {
         arc: 'Rookie Warlord Freeze',
@@ -376,7 +376,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'strawhat',
     affiliation: 'Straw Hat Pirates',
     color: '#8b5cf6',
-    avatarUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://i.pinimg.com/736x/27/38/7d/27387dce40adbcc6bac7f796317df4d4.jpg',
     milestones: [
       {
         arc: 'Ohara Buster Call',
@@ -419,7 +419,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'strawhat',
     affiliation: 'Straw Hat Pirates',
     color: '#38bdf8',
-    avatarUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://avatarfiles.alphacoders.com/376/thumb-1920-376050.png',
     milestones: [
       {
         arc: 'Baratie Cook',
@@ -470,7 +470,7 @@ export const CHARACTER_BOUNTY_HISTORIES: CharacterBountyHistory[] = [
     category: 'strawhat',
     affiliation: 'Straw Hat Pirates',
     color: '#ec4899',
-    avatarUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/one-piece-chopper-s-best-moments-in-the-show.jpg?w=1600&h=1600&fit=crop',
     milestones: [
       {
         arc: 'Drum Island',
