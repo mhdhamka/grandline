@@ -8,17 +8,21 @@ import {
   Image as ImageIcon, 
   RefreshCw,
   Award,
-  TrendingUp
+  TrendingUp,
+  Megaphone,
+  Camera,
+  Printer
 } from 'lucide-react';
 import { BountyProgressionChart } from './BountyProgressionChart.tsx';
 import { MangaPanel } from './MangaPanel.tsx';
+import { MangaBubble } from './MangaBubble.tsx';
 
 const PRESET_AVATARS = [
-  { name: 'Straw Hat', url: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop&q=80' },
-  { name: 'Swordsman', url: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80' },
-  { name: 'Navigator', url: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80' },
-  { name: 'Black Leg', url: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=80' },
-  { name: 'Devil Child', url: 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80' },
+  { name: 'Straw Hat', url: 'https://static0.srcdn.com/wordpress/wp-content/uploads/2025/09/one-piece-luffy-using-gear-4-in-egghead.jpg?w=1600&h=900&fit=crop' },
+  { name: 'Swordsman', url: 'https://static.wikia.nocookie.net/glad-you-came/images/a/a2/Zoro.png/revision/latest/thumbnail/width/360/height/360?cb=20230710081928' },
+  { name: 'Navigator', url: 'https://static.wikia.nocookie.net/onepiece/images/6/68/Nami_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20260315214841' },
+  { name: 'Black Leg', url: 'https://i.pinimg.com/736x/69/11/15/691115981b44a8d501ff486c4f966970.jpg' },
+  { name: 'Devil Child', url: 'https://i.pinimg.com/originals/f7/5e/2e/f75e2e3d328f4ca8d99248271e1b6c27.jpg' },
 ];
 
 export const BountyGenerator: React.FC = () => {
@@ -45,71 +49,57 @@ export const BountyGenerator: React.FC = () => {
 
   const handleDownload = () => {
     sound.playBountyChime();
-    // In browser environment, simple canvas snapshot or trigger print
     const element = posterRef.current;
     if (!element) return;
 
-    // We can draw to an offscreen canvas and export PNG
     const canvas = document.createElement('canvas');
     canvas.width = 600;
     canvas.height = 860;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Background parchment
     ctx.fillStyle = '#e8d5b5';
     ctx.fillRect(0, 0, 600, 860);
 
-    // Border
     ctx.strokeStyle = '#3e2723';
     ctx.lineWidth = 10;
     ctx.strokeRect(16, 16, 568, 828);
 
-    // Header WANTED
     ctx.fillStyle = '#2b1810';
     ctx.font = 'bold 80px "Cinzel", Georgia, serif';
     ctx.textAlign = 'center';
     ctx.fillText('WANTED', 300, 110);
 
-    // Picture frame
     ctx.strokeStyle = '#3e2723';
     ctx.lineWidth = 4;
     ctx.strokeRect(60, 140, 480, 360);
 
-    // Load photo
     const img = new Image();
     img.crossOrigin = 'anonymous';
     img.src = photoUrl;
     img.onload = () => {
       ctx.drawImage(img, 62, 142, 476, 356);
 
-      // DEAD OR ALIVE
       ctx.fillStyle = '#2b1810';
       ctx.font = 'bold 36px "Cinzel", Georgia, serif';
       ctx.fillText(condition, 300, 560);
 
-      // NAME
       ctx.font = 'bold 44px "Cinzel", Georgia, serif';
       ctx.fillText(pirateName.toUpperCase(), 300, 640);
 
-      // BOUNTY
       ctx.font = 'bold 34px "Space Mono", monospace';
       ctx.fillText(`฿ ${bountyAmount} -`, 300, 710);
 
-      // Marine Footer
       ctx.font = 'italic 12px serif';
-      ctx.fillText('MARINE HEADQUARTERS // KONO SAKUHIN HA FICTION DETHUNODE', 300, 780);
+      ctx.fillText('MARINE HEADQUARTERS // GAHahaha! PRINTING NEW PROPAGANDA!', 300, 780);
 
-      // Trigger download
       const link = document.createElement('a');
       link.download = `wanted_${pirateName.replace(/\s+/g, '_').toLowerCase()}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
     };
 
-    // If image fails to load or cross-origin blocks offscreen canvas
     img.onerror = () => {
-      // Fallback: fill gray
       ctx.fillStyle = '#8d6e63';
       ctx.fillRect(62, 142, 476, 356);
       ctx.fillStyle = '#2b1810';
@@ -128,67 +118,106 @@ export const BountyGenerator: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
-      {/* Top Banner using MangaPanel */}
-      <MangaPanel
-        title="WANTED POSTER GENERATOR"
-        jpTitle="手配書ジェネレーター"
-        badge="MARINE HQ CIPHER"
-        badgeColor="red"
-        sfx="DON!!"
-        headerAction={
-          <button
-            onClick={handleDownload}
-            className="px-4 py-2.5 bg-[#ffd700] hover:bg-[#ffe566] text-black font-heading font-black text-xs tracking-wider flex items-center space-x-2 border-2 border-black comic-shadow transition-all self-start md:self-auto cursor-pointer uppercase"
-          >
-            <Download className="w-4 h-4" />
-            <span>EXPORT POSTER (PNG)</span>
-          </button>
-        }
-        statusTags={[
-          { label: 'CURRENCY', value: 'BERRIES (฿)', color: 'gold' },
-          { label: 'STIPULATION', value: condition, color: 'red' },
-          { label: 'TARGET', value: pirateName || 'UNKNOWN', color: 'slate' },
-        ]}
-        footerNote="CIPHER POL AIGIS 0 // WORLD GOVERNMENT PROPAGANDA PRESS"
-        padding="sm"
-      >
-        <p className="text-xs sm:text-sm font-heading text-slate-300">
-          Construct authentic, high-resolution World Government Wanted Posters complete with custom bounty figures in Berries, Dead or Alive stipulations, and PNG export capability.
-        </p>
-      </MangaPanel>
+    <div className="space-y-6 font-heading">
+      
+      {/* Morgans Style Propaganda Bureau Banner */}
+      <div className="relative bg-white p-6 sm:p-8 border-[6px] border-black rounded-[2rem] shadow-[10px_10px_0px_rgba(0,0,0,0.9)] overflow-hidden">
+        
+        <div className="absolute right-0 bottom-0 opacity-15 pointer-events-none select-none translate-x-10 translate-y-10">
+          <img 
+            src="../assets/images/morgan.png" 
+            alt="Morgans Watermark" 
+            className="w-96 h-96 object-contain filter grayscale"
+            referrerPolicy="no-referrer"
+          />
+        </div>
 
-      {/* Editor & Live Preview Canvas */}
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="flex-1 space-y-3">
+            <div className="flex items-center space-x-3 text-xs font-black">
+              <span className="px-3 py-1 bg-black text-[#ffd700] uppercase tracking-widest rounded-full border-2 border-black flex items-center gap-1.5">
+                <Megaphone className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
+                WORLD ECONOMIC JOURNAL
+              </span>
+              <span className="text-[#dc0f0d] uppercase tracking-wider bg-red-100 px-2 py-0.5 rounded-md font-extrabold border border-red-300">
+                BIG NEWS EXCLUSIVE!!
+              </span>
+            </div>
+            
+            <div className="relative">
+              <h1 className="font-manga text-4xl sm:text-6xl text-black tracking-tight uppercase leading-none">
+                Morgans' Wanted <span className="text-[#dc0f0d]">Press Studio</span>
+              </h1>
+              <span className="manga-sfx absolute -top-6 left-[340px] text-4xl text-amber-500 rotate-12 hidden sm:inline-block">GAAAH!</span>
+            </div>
+            
+            <p className="text-xs sm:text-sm font-medium text-stone-700 bg-stone-100 p-3.5 rounded-xl border-2 border-black shadow-sm max-w-2xl">
+              "Fascinating! Absolutely magnificent numbers! Let the entire world know who is shaking up the Grand Line today! Print extra copies of the newspaper!" — <strong className="text-black">The Big News Morgans</strong>
+            </p>
+          </div>
+
+          <div className="flex flex-col items-start md:items-end gap-3 shrink-0">
+            <button
+              onClick={handleDownload}
+              className="px-6 py-4 bg-[#ffd700] hover:bg-[#ffe566] text-black font-heading font-black text-sm tracking-wider flex items-center space-x-3 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 transition-all cursor-pointer uppercase rounded-xl"
+            >
+              <Printer className="w-5 h-5 text-black" />
+              <span>PRINT & EXPORT POSTER</span>
+            </button>
+            <span className="text-[10px] font-mono font-bold text-stone-500 uppercase tracking-widest">
+              Verified by World Government HQ
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Morgans Editorial Dialogue Bubble Callout */}
+      <div className="max-w-xl mb-6">
+        <div className="bg-white border-4 border-black p-4 relative shadow-[5px_5px_0px_rgba(0,0,0,0.9)]">
+          {/* Optional manga panel corner brackets */}
+          <div className="absolute top-1 left-1 w-2 h-2 border-t-2 border-l-2 border-black pointer-events-none" />
+          <div className="absolute top-1 right-1 w-2 h-2 border-t-2 border-r-2 border-black pointer-events-none" />
+          <div className="absolute bottom-1 left-1 w-2 h-2 border-b-2 border-l-2 border-black pointer-events-none" />
+          <div className="absolute bottom-1 right-1 w-2 h-2 border-b-2 border-r-2 border-black pointer-events-none" />
+
+          <p className="text-xs sm:text-sm font-heading font-bold text-black leading-snug">
+            “Truth? Accuracy? Pah! What matters is how thrilling the headline looks on the front page of tomorrow's paper! Make those bounties skyrocket!”
+          </p>
+        </div>
+      </div>
+
+      {/* Editor & Live Preview Canvas Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
         {/* Left Form Editor */}
         <div className="lg:col-span-6 space-y-4">
           <MangaPanel
-            title="MARINE POSTER METADATA INPUT"
+            title="PROPAGANDA PRESS INTAKE"
             jpTitle="手配書作成"
-            badge="GOVERNMENT INTAKE"
+            badge="BIG NEWS DESK"
             badgeColor="gold"
             statusTags={[
               { label: 'Target Bounty', value: `฿ ${bountyAmount}`, color: 'gold' },
               { label: 'Stipulation', value: condition, color: 'red' },
             ]}
-            footerNote="INPUT VALIDATED FOR IMMEDIATE BROADCAST"
+            footerNote="AUTHORIZED BY THE WORLD ECONOMIC JOURNAL"
           >
             <div className="space-y-4">
               {/* Pirate Name */}
               <div>
-                <label className="text-xs font-heading font-bold text-slate-300 block mb-1 uppercase">PIRATE OR CRIMINAL NAME:</label>
+                <label className="text-xs font-heading font-black text-slate-300 block mb-1 uppercase">PIRATE OR CRIMINAL ALIAS:</label>
                 <input
                   type="text"
                   value={pirateName}
                   onChange={(e) => setPirateName(e.target.value)}
                   placeholder="e.g. MONKEY D. LUFFY"
-                  className="w-full px-3 py-2 bg-[#0e141d] border-2 border-black text-sm text-white focus:outline-none focus:border-[#ffd700] font-heading font-bold comic-shadow-sm uppercase"
+                  className="w-full px-3 py-2.5 bg-[#0e141d] border-2 border-black text-sm text-white focus:outline-none focus:border-[#ffd700] font-heading font-bold comic-shadow-sm uppercase"
                 />
               </div>
 
               {/* Bounty in Berries */}
               <div>
-                <label className="text-xs font-heading font-bold text-slate-300 block mb-1 uppercase">BOUNTY SUM (BERRIES):</label>
+                <label className="text-xs font-heading font-black text-slate-300 block mb-1 uppercase">BOUNTY SUM (BERRIES):</label>
                 <div className="relative">
                   <span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-[#ffd700] font-black text-base">฿</span>
                   <input
@@ -196,12 +225,12 @@ export const BountyGenerator: React.FC = () => {
                     value={bountyAmount}
                     onChange={(e) => setBountyAmount(e.target.value)}
                     placeholder="3,000,000,000"
-                    className="w-full pl-8 pr-3 py-2 bg-[#0e141d] border-2 border-black text-sm text-white focus:outline-none focus:border-[#ffd700] font-mono font-black comic-shadow-sm"
+                    className="w-full pl-8 pr-3 py-2.5 bg-[#0e141d] border-2 border-black text-sm text-white focus:outline-none focus:border-[#ffd700] font-mono font-black comic-shadow-sm"
                   />
                 </div>
 
                 {/* Quick bounty presets */}
-                <div className="flex flex-wrap gap-1.5 mt-2">
+                <div className="flex flex-wrap gap-1.5 mt-2.5">
                   {['30,000,000', '100,000,000', '500,000,000', '1,500,000,000', '3,000,000,000', '4,611,100,000'].map((preset) => (
                     <button
                       key={preset}
@@ -216,7 +245,7 @@ export const BountyGenerator: React.FC = () => {
 
               {/* Condition */}
               <div>
-                <label className="text-xs font-heading font-bold text-slate-300 block mb-1 uppercase">STIPULATION STAMP:</label>
+                <label className="text-xs font-heading font-black text-slate-300 block mb-1 uppercase">STIPULATION STAMP:</label>
                 <div className="grid grid-cols-2 gap-2">
                   {['DEAD OR ALIVE', 'ONLY ALIVE (Vinsmoke Command)'].map((c) => (
                     <button
@@ -236,7 +265,7 @@ export const BountyGenerator: React.FC = () => {
 
               {/* Photo Selection / Upload */}
               <div>
-                <label className="text-xs font-heading font-bold text-slate-300 block mb-1 uppercase">PORTRAIT SELECTION:</label>
+                <label className="text-xs font-heading font-black text-slate-300 block mb-1 uppercase">MUGSHOT PORTRAIT:</label>
                 <div className="flex items-center space-x-2 mb-3">
                   <input
                     type="file"
@@ -247,15 +276,15 @@ export const BountyGenerator: React.FC = () => {
                   />
                   <button
                     onClick={() => fileInputRef.current?.click()}
-                    className="px-3 py-2 bg-[#0e141d] hover:bg-[#182130] text-xs font-heading font-bold text-white border-2 border-black flex items-center space-x-1.5 transition-all cursor-pointer comic-shadow-sm uppercase"
+                    className="px-3.5 py-2.5 bg-[#0e141d] hover:bg-[#182130] text-xs font-heading font-bold text-white border-2 border-black flex items-center space-x-2 transition-all cursor-pointer comic-shadow-sm uppercase"
                   >
-                    <Upload className="w-3.5 h-3.5 text-[#ffd700]" />
-                    <span>Upload Custom Image</span>
+                    <Upload className="w-4 h-4 text-[#ffd700]" />
+                    <span>Upload Custom Mugshot</span>
                   </button>
                 </div>
 
                 {/* Preset avatar thumbnails */}
-                <span className="text-[11px] font-heading font-bold text-slate-400 block mb-1.5 uppercase">OR CHOOSE ICONIC MUGSHOT:</span>
+                <span className="text-[11px] font-heading font-bold text-slate-400 block mb-1.5 uppercase">OR SELECT AN Albatross ARCHIVE ICON:</span>
                 <div className="grid grid-cols-5 gap-2">
                   {PRESET_AVATARS.map((p, idx) => (
                     <button
@@ -282,15 +311,15 @@ export const BountyGenerator: React.FC = () => {
         {/* Right Live Wanted Poster Stand */}
         <div className="lg:col-span-6 flex justify-center items-start">
           <MangaPanel
-            title="LIVE WANTED POSTER STAND"
+            title="LIVE MORGANS EDITION STAND"
             jpTitle="手配書展示"
-            badge="ACTIVE REWARD"
+            badge="FRONT PAGE"
             badgeColor="red"
             statusTags={[
               { label: 'Rendering', value: '2D High-Res Canvas', color: 'slate' },
-              { label: 'Verification', value: 'VALID ISSUANCE', color: 'green' },
+              { label: 'Verification', value: 'BIG NEWS APPROVED', color: 'green' },
             ]}
-            footerNote="MARINE NOTICE: REPORT SIGHTINGS TO NEAREST BASE IMMEDIATELY"
+            footerNote="WORLD ECONOMIC JOURNAL // SPECIAL HEADLINE CIRCULATION"
             className="w-full"
             bodyClassName="flex justify-center"
           >
@@ -304,7 +333,7 @@ export const BountyGenerator: React.FC = () => {
             >
               {/* Vintage grunge corner marks */}
               <div className="absolute top-2 left-2 text-[10px] font-mono opacity-40">№ 849201</div>
-              <div className="absolute top-2 right-2 text-[10px] font-mono opacity-40">MARINE HQ</div>
+              <div className="absolute top-2 right-2 text-[10px] font-mono opacity-40">BIG NEWS PRESS</div>
 
               {/* Header WANTED */}
               <div className="text-center pt-2 pb-3">
@@ -345,16 +374,16 @@ export const BountyGenerator: React.FC = () => {
                 </span>
               </div>
 
-              {/* Marine Fine Print */}
+              {/* Marine / Morgans Fine Print */}
               <div className="text-center mt-4 text-[7px] font-serif text-[#553b26] leading-tight border-t border-[#362010]/30 pt-2 uppercase">
-                KONO SAKUHIN HA FICTION DETHUNODE JITSUZAISURU JINBUTSU DANTAI SONOTA NO SOSHIKI TO WA ISSAI KANKEI ARIMASEN // MARINE HEADQUARTERS
+                GAHAHAHA! MORGANS PRESS BUREAU
               </div>
             </div>
           </MangaPanel>
         </div>
       </div>
 
-      {/* Chronological Bounty Growth Analytics using Recharts */}
+      {/* Chronological Bounty Growth Analytics */}
       <BountyProgressionChart
         initialCharacterId="luffy"
         onApplyToPoster={(data) => {
@@ -364,7 +393,6 @@ export const BountyGenerator: React.FC = () => {
           if (data.photoUrl) {
             setPhotoUrl(data.photoUrl);
           }
-          // Scroll smoothly to the wanted poster preview
           posterRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }}
       />

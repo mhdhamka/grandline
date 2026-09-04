@@ -41,7 +41,7 @@ export const TOP_TIER_HAKI_RANKS = [
   },
   {
     name: 'Red-Haired Shanks',
-    epithet: 'Chief of Red Hair Pirates // Emperor',
+    epithet: 'Captain of Red Hair Pirates // Emperor',
     conquerorsTier: 'God Tier (WiFi Haki paralyzing Admiral Ryokugyu from miles offshore)',
     armamentTier: 'Supreme Master (Gryphon Saber)',
     observationTier: 'Future Sight Killer (Observation Killing technique)',
