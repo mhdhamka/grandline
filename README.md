@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./src/assets/grandline-logo.png" width="90" alt="Grand Line Log Pose Logo" />
+<img src="./src/assets/gimages/jollyroger.png" width="90" alt="Grand Line Log Pose Logo" />
 
 # GRAND LINE // 偉大なる航路（グランド・ライン）
 *“Wealth, fame, power... One piece. I found everything the world had to offer! Free Yourself. Take to the seas, my treasure is yours to find!”*
@@ -10,17 +10,17 @@
 
 [Launch Grand Line App](http://localhost:3000) · [Report Marine](https://github.com/mhdhamka/grandline/issues) · [Request Log Pose Patch](https://github.com/mhdhamka/grandline/issues)
 
-![ライセンス](https://img.shields.io/badge/ライセンス-MIT-blue.svg)
-![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
-![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black)
-![四皇階級](https://img.shields.io/badge/四皇階級-赤髪-red)
+![License](https://img.shields.io/badge/License-MIT-blue.svg) ![ライセンス](https://img.shields.io/badge/ライセンス-MIT-blue.svg)
+![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black) ![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black)
+![Yonko Tier](https://img.shields.io/badge/Yonko_Tier-Red_Hair-red) ![四皇階級](https://img.shields.io/badge/四皇階級-赤髪-red)
 
 </div>
 
 ## What is this?
 
-As the **Elbaph Arc** builds toward the epic clash of **Luffy vs. Saint Nerona Imu**, are you tired of the historical timeline crumbling beneath your feet while the World Government races to erase the **Void Century** and bury the secrets of the Ancient Kingdom?
+As the **Elbaph Arc** builds toward the epic clash of **Luffy vs. Saint Nerona Imu**, are you tired of the historical timeline crumbling beneath your feet while the World Government races to erase the **Void Century** (空白の100年) and bury the secrets of the Ancient Kingdom?
 
 **Grand Line** (偉大なる航路) is a fully interactive, cybernetic retro-HUD web app built for true pirates who want to track the road to Laugh Tale without getting wiped out by a Buster Call (オカダのバスターコール). It features custom manga dialogue speech bubbles (`MangaBubble`), dynamic island-to-island status trackers, and an integrated **Gemini 2.5 Vegapunk Terminal** ready to answer your most unhinged Grand Line queries completely free of censorship!
 
