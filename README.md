@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./src/assets/gimages/jollyroger.png" width="90" alt="Grand Line Log Pose Logo" />
+<img src="../../src/assets/gimages/jollyroger.png" width="90" alt="Grand Line Log Pose Logo" />
 
 # GRAND LINE // 偉大なる航路（グランド・ライン）
 *“Wealth, fame, power... One piece. I found everything the world had to offer! Free Yourself. Take to the seas, my treasure is yours to find!”*
@@ -10,11 +10,11 @@
 
 [Launch Grand Line App](http://localhost:3000) · [Report Marine](https://github.com/mhdhamka/grandline/issues) · [Request Log Pose Patch](https://github.com/mhdhamka/grandline/issues)
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg) ![ライセンス](https://img.shields.io/badge/ライセンス-MIT-blue.svg)
-![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
-![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black) ![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black)
-![Yonko Tier](https://img.shields.io/badge/Yonko_Tier-Red_Hair-red) ![四皇階級](https://img.shields.io/badge/四皇階級-赤髪-red)
+![License](https://img.shields.io/badge/License_%2F_ライセンス-MIT-blue.svg)
+![Vite](https://img.shields.io/badge/Vite_%2F_Vite-React-646CFF?logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript_%2F_TypeScript-007ACC?logo=typescript&logoColor=white)
+![AI](https://img.shields.io/badge/AI_%2F_AI-Gemini_2.5-ffd700?logo=google&logoColor=black)
+![Yonko Tier](https://img.shields.io/badge/Yonko_Tier_%2F_四皇階級-Red_Hair_(_赤髪_)-red)
 
 </div>
 
