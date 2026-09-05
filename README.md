@@ -11,9 +11,9 @@
 [Launch Grand Line App](http://localhost:3000) · [Report Marine](https://github.com/mhdhamka/grandline/issues) · [Request Log Pose Patch](https://github.com/mhdhamka/grandline/issues)
 
 ![License](https://img.shields.io/badge/License_%2F_ライセンス-MIT-blue.svg)
-![Vite](https://img.shields.io/badge/ViteVite-React-646CFF?logo=vite&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
-![AI](https://img.shields.io/badge/AIAI-Gemini_2.5-ffd700?logo=google&logoColor=black)
+![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black)
 ![Yonko Tier](https://img.shields.io/badge/Yonko_Tier_%2F_四皇階級-Red_Hair_(_赤髪_)-red)
 
 </div>
