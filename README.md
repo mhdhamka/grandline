@@ -82,4 +82,3 @@ Open **`http://localhost:3000`** in your browser and set sail for Laugh Tale!
 
 If this protocol saved your ship from a Buster Call, drop a star!
 
-```
