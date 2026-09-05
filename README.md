@@ -2,56 +2,43 @@
 
 <img src="./src/assets/grandline-logo.png" width="90" alt="Grand Line Log Pose Logo" />
 
-# GRAND LINE PROTOCOL // PONEGLYPH ARCHIVES  
-*“Wealth, fame, power... One piece. Everything the world had to offer!”*
+# GRAND LINE // 偉大なる航路（グランド・ライン）
+*“Wealth, fame, power... One piece. I found everything the world had to offer! Free Yourself. Take to the seas, my treasure is yours to find!”*
 
-[Launch Grand Line App](http://localhost:3000) · [Report Marine Incursion](https://github.com/mhdhamka/grandline/issues) · [Request Log Pose Patch](https://github.com/mhdhamka/grandline/issues)
+*“富、名声、力…… この世のすべてを手に入れた男、海賊王ゴールド・ロジャー。彼の死際に放った一言が、人々を海へ駆り立てる――
+『俺の財宝か？ 欲しければくれてやる。探してみろ、この世のすべてをそこに置いてきた！"*
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[Launch Grand Line App](http://localhost:3000) · [Report Marine](https://github.com/mhdhamka/grandline/issues) · [Request Log Pose Patch](https://github.com/mhdhamka/grandline/issues)
+
+![ライセンス](https://img.shields.io/badge/ライセンス-MIT-blue.svg)
 ![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite&logoColor=white)
-![AI Chronologist](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black)
-![Threat Level](https://img.shields.io/badge/Incursion-Yonko_Tier-red)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black)
+![四皇階級](https://img.shields.io/badge/四皇階級-赤髪-red)
 
 </div>
 
----
-
-> **CLASSIFIED MARINES / WORLD GOVERNMENT MAINFRAME TRANSMISSION** > *Initializing Grand Line Hegemony & Final Saga survival matrix...*
-> ```text
-> [====================================] 100% LOG POSE SYNCED
-> [WILL OF D STATUS]: ABSOLUTE. NAKAMA CHRONOLOGIST ONLINE.
-> ```
-
----
-
 ## What is this?
 
-Tired of the Sacred Timeline of history crumbling beneath your feet while the World Government races to erase the **Void Century** and bury the truth of the Ancient Kingdom? 
+As the **Elbaph Arc** builds toward the epic clash of **Luffy vs. Saint Nerona Imu**, are you tired of the historical timeline crumbling beneath your feet while the World Government races to erase the **Void Century** and bury the secrets of the Ancient Kingdom?
 
-**Grand Line Protocol** is a fully interactive, cybernetic retro-hud web app built for absolute pirates who want to track the road to Laugh Tale without getting pruned by a Buster Call. It features custom manga dialogue speech bubbles (`MangaBubble`), dynamic island-to-island status trackers, and an integrated **Gemini 2.5 AI Nakama Chronologist** ready to answer your most unhinged Grand Line queries!
-
----
-
-## Interactive Preview & Features
-
-
-
-```
+**Grand Line** (偉大なる航路) is a fully interactive, cybernetic retro-HUD web app built for true pirates who want to track the road to Laugh Tale without getting wiped out by a Buster Call (オカダのバスターコール). It features custom manga dialogue speech bubbles (`MangaBubble`), dynamic island-to-island status trackers, and an integrated **Gemini 2.5 Vegapunk Terminal** ready to answer your most unhinged Grand Line queries completely free of censorship!
 
 ---
 
-| LOG POSE CLOCK   | 15-ARC ROADMAP    | NAKAMA CHRONOLOGIST |
-|---------------------------------------------------|
-| Real-time countdown & navigation across the seas  |
-| Track East Blue to New World island transitions   |
-| Query Gemini AI for instant Grand Line lore       |
-|___________________________________________________|
-
-```
-
-* **Cybernetic Comic Layout:** High-contrast tactical manga phosphor glow, scanlines, drop shadows, and brutalist terminal styling styled around a pirate captain's navigational desk.
-* **Nakama Chronologist AI:** Ask things like *"How does the Log Pose navigate through the New World?"* or *"What is the true nature of Devil Fruits?"* and receive decrees straight from the throne of history.
-* **Live Incursion Simulator:** Monitor multi-island stability indices and prepare your ship before the currents pull you into a whirlpool.
+### ⚓ 主な機能 (Key Features)
+* **ナビバー航海ドック (Navbar Navigation Dock):** A Thousand Sunny deck-inspired 10-stage interactive menu for seamless traversal across all app modules.
+* **漫画バブル (`MangaBubble`):** Classic, rubber-hose comic book panels infused with Egghead future-tech aesthetics.
+* **ログポーズ (Log Pose Arc & Island Navigation):** Track your voyage arc-by-arc across the seas with detailed summaries, debut powers, and antagonists.
+* **歴史の本文 (Poneglyphs & Lore):** Uncover ancient texts and historical records leading to the truth of the world.
+* **麦わらの一味 (Nakama Bio Cards):** TCG-inspired character profiles tracking bios, dreams, origins, roles, devil fruits, weapons, and chronological bounty progression per arc.
+* **ギア覚醒 (Gear Matrix):** Explore transformations and power-ups for Luffy and the crew.
+* **悪魔の実系統 (Devil Fruit Encyclopedia):** Comprehensive archives covering devil fruit lore and classifications.
+* **強敵ファイル (Villains):** Detailed files on the primary antagonists from every major saga and arc.
+* **手配書生成 (Bounty Poster):** Custom Morgan-style poster generator where you can create, import, and view chronological bounty ascensions for key characters like Luffy, Zoro, Sanji, Robin, and Chopper.
+* **覇気鍛錬 (Haki Mastery):** Deep-dive into the three core concepts of Haki with live simulations for Haoshoku Haki (Conqueror's) // 覇王色の覇気, and Kenbunshoku Haki (Observation) // 見聞色の覇気'.
+* **劇場版回顧 (Cinematics):** Complete catalog of One Piece feature films from the first release up to *Film Red*.
+* **ベガパンクAI (Vegapunk Terminal):** Egghead future-tech cybernetic terminal powered by Gemini 2.5 featuring Vegapunk, Shaka, and Lilith to answer any lore question.
 
 ---
 
@@ -59,7 +46,7 @@ Tired of the Sacred Timeline of history crumbling beneath your feet while the Wo
 
 | Category | Technology & Specification |
 | :--- | :--- |
-| **Frontend** | React + Vite (Lightning-fast sea shifts across the Calm Belt) |
+| **Frontend** | TS React + Vite (Lightning-fast sea shifts across the Calm Belt) |
 | **Styling** | Tailwind CSS (Custom Cybernetic HUD Utilities & Manga Grids) |
 | **Icons** | Lucide React & Grand Line Hegemony Assets |
 | **Brain** | Google Gemini 2.5 API (Powered by Poneglyph Clearance) |

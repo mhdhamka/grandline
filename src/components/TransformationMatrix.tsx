@@ -3,17 +3,9 @@ import { LUFFY_TRANSFORMATIONS, NAKAMA_POWER_UPS } from '../data/transformations
 import { TransformationTier } from '../types.ts';
 import { sound } from '../utils/audio.ts';
 import { 
-  Zap, 
-  Flame, 
-  Activity, 
-  Gauge, 
   Volume2, 
-  Sparkles, 
-  Swords, 
-  ShieldAlert, 
   Play,
-  Heart,
-  Sun
+  Heart
 } from 'lucide-react';
 import { MangaPanel } from './Manga/MangaPanel.tsx';
 
@@ -380,7 +372,6 @@ export const TransformationMatrix: React.FC = () => {
                   title={crew.character}
                   badge="CREW EVOLUTION"
                   badgeColor="gold"
-                  icon={<Sparkles className="w-5 h-5 text-[#ffd700]" />}
                   statusTags={[
                     { label: 'Evolutions', value: `${crew.stages.length} Stages`, color: 'slate' },
                     { label: 'Combat Status', value: 'Active Fighter', color: 'red' },

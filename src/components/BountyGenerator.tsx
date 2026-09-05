@@ -3,8 +3,6 @@ import { sound } from '../utils/audio.ts';
 import { 
   FileText, 
   Upload, 
-  Download, 
-  Sparkles, 
   Image as ImageIcon, 
   RefreshCw,
   Award,

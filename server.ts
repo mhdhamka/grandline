@@ -6,7 +6,6 @@ import { createServer as createViteServer } from 'vite';
 
 dotenv.config();
 
-// Standard CommonJS directory reference (fixes the build import.meta warning)
 const __dirname = path.resolve();
 
 const app = express();

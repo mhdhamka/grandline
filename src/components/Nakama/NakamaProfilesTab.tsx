@@ -120,6 +120,32 @@ export const NakamaProfilesTab: React.FC<NakamaProfilesTabProps> = ({
               tailPosition="bottom-left"
               showCopyButton={true}
               showAudioButton={true}
+              onAudioPlay={() => {
+                const name = selectedNakama.name.toLowerCase();
+                if (name.includes('zoro')) {
+                  sound.playSwordSlash();
+                } else if (name.includes('luffy')) {
+                  sound.playDrumsOfLiberation();
+                } else if (name.includes('sanji')) {
+                  sound.playGearShift();
+                } else if (name.includes('nami')) {
+                  sound.playBountyChime();
+                } else if (name.includes('usopp')) {
+                  sound.playClick(600);
+                } else if (name.includes('chopper')) {
+                  sound.playClick(1200);
+                } else if (name.includes('robin')) {
+                  sound.playPoneglyphHum();
+                } else if (name.includes('franky')) {
+                  sound.playConquerorsLightning();
+                } else if (name.includes('brook')) {
+                  sound.playBountyChime();
+                } else if (name.includes('jinbe')) {
+                  sound.playPoneglyphHum();
+                } else {
+                  sound.playDenDenMushi();
+                }
+              }}
               className="w-full mb-3"
             />
 

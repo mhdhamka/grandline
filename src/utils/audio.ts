@@ -1,17 +1,27 @@
 /**
  * Procedural Web Audio Synthesizer for Grand Line Omniverse Terminal
- * No external sound files required — pure browser Web Audio API synthesis
+ * Fixed with bulletproof fallback for the Drums of Liberation!
  */
 
 class SoundEngine {
   private ctx: AudioContext | null = null;
   public enabled: boolean = true;
+  private liberationAudio: HTMLAudioElement | null = null;
 
   constructor() {
     // Restore preference if stored
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('grand_line_sound_enabled');
       this.enabled = stored !== null ? stored === 'true' : true;
+      
+      // Initialize external audio safely with error trapping
+      try {
+        this.liberationAudio = new Audio('https://www.zedge.net/ringtones/867cff1b-9b5c-4944-be5d-ae135dd68e4d'); 
+        this.liberationAudio.volume = 0.7;
+        this.liberationAudio.crossOrigin = 'anonymous';
+      } catch {
+        // Safe fallback
+      }
     }
   }
 
@@ -103,7 +113,6 @@ class SoundEngine {
     const ctx = this.getContext();
     if (!ctx) return;
     try {
-      // 1. Steam hiss (filtered noise)
       const bufferSize = ctx.sampleRate * 0.25;
       const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
       const data = buffer.getChannelData(0);
@@ -126,7 +135,6 @@ class SoundEngine {
       noiseGain.connect(ctx.destination);
       noise.start();
 
-      // 2. Heavy rubber recoil thud
       const osc = ctx.createOscillator();
       const oscGain = ctx.createGain();
       osc.type = 'triangle';
@@ -145,16 +153,44 @@ class SoundEngine {
     }
   }
 
-  // Drums of Liberation (Gear 5 Joy Boy heartbeat rhythm: Doom-Dut-Da-Da)
+  // Drums of Liberation (Attempts external file, GUARANTEES fallback to procedural synth if blocked)
   public playDrumsOfLiberation() {
+    if (!this.enabled) return;
+
+    let playedExternal = false;
+
+    if (this.liberationAudio) {
+      try {
+        this.liberationAudio.currentTime = 0;
+        const playPromise = this.liberationAudio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // If browser blocks or url fails, trigger fallback immediately
+            this.playProceduralDrums();
+          });
+          playedExternal = true;
+        }
+      } catch {
+        playedExternal = false;
+      }
+    }
+
+    // If external audio object wasn't initialized or failed instantly, run procedural fallback
+    if (!playedExternal) {
+      this.playProceduralDrums();
+    }
+  }
+
+  // Guaranteed Procedural Drums of Liberation (Joy Boy heartbeat rhythm: Doom-Dut-Da-Da)
+  private playProceduralDrums() {
     const ctx = this.getContext();
     if (!ctx) return;
     try {
       const beats = [
-        { time: 0.0, freq: 85, vol: 0.25 },
-        { time: 0.12, freq: 110, vol: 0.2 },
-        { time: 0.24, freq: 95, vol: 0.18 },
-        { time: 0.32, freq: 125, vol: 0.22 },
+        { time: 0.0, freq: 85, vol: 0.3 },
+        { time: 0.15, freq: 115, vol: 0.25 },
+        { time: 0.3, freq: 95, vol: 0.22 },
+        { time: 0.42, freq: 130, vol: 0.28 },
       ];
 
       beats.forEach((b) => {
@@ -162,15 +198,15 @@ class SoundEngine {
         const gain = ctx.createGain();
         osc.type = 'sine';
         osc.frequency.setValueAtTime(b.freq, ctx.currentTime + b.time);
-        osc.frequency.exponentialRampToValueAtTime(30, ctx.currentTime + b.time + 0.1);
+        osc.frequency.exponentialRampToValueAtTime(25, ctx.currentTime + b.time + 0.12);
 
         gain.gain.setValueAtTime(b.vol, ctx.currentTime + b.time);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + b.time + 0.1);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + b.time + 0.14);
 
         osc.connect(gain);
         gain.connect(ctx.destination);
         osc.start(ctx.currentTime + b.time);
-        osc.stop(ctx.currentTime + b.time + 0.12);
+        osc.stop(ctx.currentTime + b.time + 0.15);
       });
     } catch {
       // Audio safety
@@ -238,7 +274,6 @@ class SoundEngine {
     const ctx = this.getContext();
     if (!ctx) return;
     try {
-      // 1. Deep seismic thunder shockwave
       const osc = ctx.createOscillator();
       const oscGain = ctx.createGain();
       osc.type = 'sawtooth';
@@ -253,7 +288,6 @@ class SoundEngine {
       osc.start();
       osc.stop(ctx.currentTime + 0.42);
 
-      // 2. Crackling lightning burst
       const bufferSize = ctx.sampleRate * 0.2;
       const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
       const data = buffer.getChannelData(0);
@@ -308,4 +342,4 @@ class SoundEngine {
   }
 }
 
-export const sound = new SoundEngine();
+export const sound = new SoundEngine(); 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, Sparkles, ChevronDown, RefreshCw, Eye, Sliders, Zap, Flame, Compass, CloudLightning } from 'lucide-react';
+import { ChevronDown, RefreshCw, Sliders, Zap, Flame, Compass, CloudLightning } from 'lucide-react';
 import { sound } from '../../utils/audio.ts';
 
 export type HalftonePatternMode = 'dense' | 'loose' | 'inverted' | 'auto';
@@ -266,7 +266,6 @@ export const MangaHalftoneMenu: React.FC<MangaHalftoneMenuProps> = ({
               NEGATIVE INK
             </div>
             <div className="flex items-center space-x-1.5 text-[#dc0f0d] font-black text-xs mb-1.5">
-              <Sparkles className="w-3.5 h-3.5" />
               <span>INVERTED SCREENTONE</span>
             </div>
             <p className="text-[11px] text-stone-700 leading-snug font-bold">
