@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../src/assets/gimages/jollyroger.png" width="90" alt="Grand Line Log Pose Logo" />
+<img src="../src/assets/images/jollyroger.png" width="90" alt="Grand Line Log Pose Logo" />
 
 # GRAND LINE // 偉大なる航路（グランド・ライン）
 *“Wealth, fame, power... One piece. I found everything the world had to offer! Free Yourself. Take to the seas, my treasure is yours to find!”*
