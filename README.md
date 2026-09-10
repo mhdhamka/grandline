@@ -78,7 +78,7 @@ Open **`http://localhost:3000`** in your browser and set sail for Laugh Tale!
 
 ---
 
-*Developed with absolute authority by [mhdhamka*](https://github.com/mhdhamka)
+Developed with absolute authority by [mhdhamka](https://github.com/mhdhamka)
 
 If this protocol saved your ship from a Buster Call, drop a star!
 
