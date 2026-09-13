@@ -14,7 +14,6 @@
 ![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
 ![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?logo=google&logoColor=black)
-![Yonko Tier](https://img.shields.io/badge/Yonko_Tier_%2F_四皇階級-Red_Hair_(_赤髪_)-red)
 
 </div>
 
