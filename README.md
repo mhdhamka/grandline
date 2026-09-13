@@ -3,7 +3,7 @@
 <img src="src/assets/images/jollyroger.png" width="90" alt="Grand Line Log Pose Logo" />
 
 # GRAND LINE // 偉大なる航路（グランド・ライン）
-*“Wealth, fame, power... One piece. I found everything the world had to offer! Free Yourself. Take to the seas, my treasure is yours to find!”*
+*“Wealth, fame, power, I found everything this world has to offer! Free Yourself. Take to the seas, my treasure is yours to find!”*
 
 *“富、名声、力…… この世のすべてを手に入れた男、海賊王ゴールド・ロジャー。彼の死際に放った一言が、人々を海へ駆り立てる――
 『俺の財宝か？ 欲しければくれてやる。探してみろ、この世のすべてをそこに置いてきた！"*
