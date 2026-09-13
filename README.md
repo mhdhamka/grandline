@@ -25,7 +25,7 @@ As the **Elbaph Arc** builds toward the epic clash of **Luffy vs. Saint Nerona I
 
 ---
 
-### ⚓ 主な機能 (Key Features)
+### 主な機能 (Key Features)
 * **ナビバー航海ドック (Navbar Navigation Dock):** A Thousand Sunny deck-inspired 10-stage interactive menu for seamless traversal across all app modules.
 * **漫画バブル (`MangaBubble`):** Classic, rubber-hose comic book panels infused with Egghead future-tech aesthetics.
 * **ログポーズ (Log Pose Arc & Island Navigation):** Track your voyage arc-by-arc across the seas with detailed summaries, debut powers, and antagonists.
