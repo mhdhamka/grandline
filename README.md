@@ -21,7 +21,7 @@
 
 As the **Elbaph Arc** builds toward the epic clash of **Luffy vs. Saint Nerona Imu**, are you tired of the historical timeline crumbling beneath your feet while the World Government races to erase the **Void Century** (空白の100年) and bury the secrets of the Ancient Kingdom?
 
-**Grand Line** (偉大なる航路) is a fully interactive, cybernetic retro-HUD web app built for true pirates who want to track the road to Laugh Tale without getting wiped out by a Buster Call (オカダのバスターコール). It features custom manga dialogue speech bubbles (`MangaBubble`), dynamic island-to-island status trackers, and an integrated **Gemini 2.5 Vegapunk Terminal** ready to answer your most unhinged Grand Line queries completely free of censorship!
+**Grand Line** (偉大なる航路) is a fully interactive, manga panel inspired web app built for true pirates who want to track the road to Laugh Tale without getting wiped out by a Buster Call (オカダのバスターコール). It features custom manga dialogue speech bubbles (`MangaBubble`), dynamic island-to-island status trackers, and an integrated **Gemini 2.5 Vegapunk Terminal** ready to answer your most unhinged Grand Line queries completely free of censorship!
 
 ---
 
