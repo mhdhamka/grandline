@@ -4,7 +4,7 @@
 
 # GRAND LINE // 偉大なる航路（グランド・ライン）
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3500&pause=1000&color=F8FAFC&background=7C3AED00&center=true&vCenter=true&width=600&lines=Wealth%2C+Fame%2C+Power...;Find+Everything+This+World+Offers!;Set+Sail+for+Laugh+Tale!)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=16&duration=4000&pause=1000&color=F8FAFC&background=7C3AED00&center=true&vCenter=true&width=700&lines=Wealth%2C+fame%2C+power%2C+I+found+everything+this+world+has+to+offer!;Free+Yourself.+Take+to+the+seas%2C+my+treasure+is+yours+to+find!;Set+Sail+for+Laugh+Tale!)](https://git.io/typing-svg)
 
 *“富、名声、力…… この世のすべてを手に入れた男、海賊王ゴールド・ロジャー。彼の死際に放った一言が、人々を海へ駆り立てる――  
 『俺の財宝か？ 欲しければくれてやる。探してみろ、この世のすべてをそこに置いてきた！』”*
