@@ -6,7 +6,6 @@ import confetti from 'canvas-confetti';
 import {  
   Check,  
   Compass,  
-  Globe2,  
   Key,  
   Unlock,  
   Lock,
@@ -144,7 +143,6 @@ export const PoneglyphLaughTale: React.FC = () => {
 
           <div className="flex items-center justify-between text-xs font-heading font-black text-black mb-4 border-b-3 border-black pb-2.5">
             <span className="flex items-center space-x-1.5 text-black">
-              <Globe2 className="w-4 h-4 text-[#ff0055]" />
               <span>GRAND LINE CARTOGRAPHIC PROJECTION</span>
             </span>
             <span className="px-2.5 py-0.5 bg-black text-[#ffd700] text-[10px] border-2 border-black comic-shadow-sm font-black flex items-center gap-1">
