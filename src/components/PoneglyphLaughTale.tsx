@@ -6,7 +6,6 @@ import confetti from 'canvas-confetti';
 import {  
   Check,  
   Compass,  
-  Key,  
   Unlock,  
   Lock,
   Hammer
@@ -404,7 +403,6 @@ export const PoneglyphLaughTale: React.FC = () => {
         badge="NICO ROBIN DECODER"
         badgeColor="red"
         variant="default"
-        icon={<Key className="w-4 h-4 text-[#ff0055]" />}
         statusTags={[
           { label: 'SCRIPT', value: 'PHONETIC RUNIC MATRIX', color: 'blue' },
           { label: 'STATUS', value: 'REAL-TIME TRANSLATION', color: 'green' },
