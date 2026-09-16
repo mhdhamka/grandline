@@ -21,7 +21,6 @@
 ![Vite](https://img.shields.io/badge/Vite-React-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 ![AI](https://img.shields.io/badge/AI-Gemini_2.5-ffd700?style=flat-square&logo=google&logoColor=black)
-![GitHub Repo stars](https://img.shields.io/github/stars/mhdhamka/grandline?style=flat-square&color=yellow)
 
 </div>
 
