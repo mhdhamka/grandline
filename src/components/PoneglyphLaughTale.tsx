@@ -10,7 +10,6 @@ import {
   Key,  
   Unlock,  
   Lock,
-  Scroll,
   Hammer
 } from 'lucide-react';
 import { MangaPanel } from './Manga/MangaPanel.tsx';
@@ -93,7 +92,8 @@ export const PoneglyphLaughTale: React.FC = () => {
     return str
       .toUpperCase()
       .split('')
-      .map((ch) => ancientRunesMap[ch] || ch)
+      .
+      map((ch) => ancientRunesMap[ch] || ch)
       .join('');
   };
 
@@ -106,7 +106,6 @@ export const PoneglyphLaughTale: React.FC = () => {
         badge="FOUR SACRED ROAD PONEGLYPHS"
         badgeColor="red"
         variant="default"
-        icon={<Scroll className="w-5 h-5 text-[#ff0055]" />}
         sfx="DODON!!"
         headerAction={
           <div className="flex items-center space-x-3 bg-white border-3 border-black p-2.5 comic-shadow-sm">
